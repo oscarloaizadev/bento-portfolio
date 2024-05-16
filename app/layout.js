@@ -1,7 +1,8 @@
-import { Inter } from "next/font/google";
+import { Manrope } from "next/font/google";
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
+//const inter = Inter({ subsets: ["latin"] });
+const font = Manrope({ subsets: ["latin"] });
 
 export const metadata = {
   title: "Create Next App",
@@ -10,8 +11,11 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
+    <html
+      className="scrollbar-w-8 scrollbar-track-rounded-full scrollbar scrollbar-thumb-new-950 scrollbar-track-new-500 h-32 overflow-y-scroll"
+      lang="en"
+    >
+      <body className={font.className}>{children}</body>
     </html>
   );
 }

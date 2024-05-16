@@ -1,0 +1,57 @@
+{
+  "projects": [
+    {
+      "name": "Project 1",
+      "description": "Project 1 description",
+      "year": 2024,
+      "new": true
+    },
+    {
+      "name": "Project 2",
+      "description": "Project 2 description",
+      "year": 2024
+    }
+  ],
+  "stack": [
+    { "name": "Bootstrap", "reactIcon": "FaBootstrap", "type": "fa" },
+    { "name": "React", "reactIcon": "FaReact", "type": "fa" },
+    { "name": "Sass", "reactIcon": "FaSass", "type": "fa" },
+    { "name": "JQuery", "reactIcon": "DiJqueryLogo", "type": "di" },
+    { "name": "Javascript", "reactIcon": "RiJavascriptFill", "type": "ri" },
+    { "name": "PHP", "reactIcon": "SiPhp", "type": "si" },
+    { "name": "Figma", "reactIcon": "FaFigma", "type": "fa" },
+    { "name": "MySql", "reactIcon": "SiMysql", "type": "si" }
+  ],
+  "social": [
+    { "name": "LinkedIn", "reactIcon": "FaLinkedin", "type": "fa" },
+    { "name": "Instagram", "reactIcon": "FaInstagram", "type": "fa" },
+    { "name": "Youtube", "reactIcon": "FaYoutube", "type": "fa" },
+    { "name": "Facebook", "reactIcon": "FaFacebook", "type": "fa" }
+  ],
+  "portfolio": [
+    { "name": "GitHub", "reactIcon": "FaGithub", "type": "fa" },
+    { "name": "Behance", "reactIcon": "FaBehance ", "type": "fa" }
+  ],
+  "contact": [
+    { "name": "Gmail", "reactIcon": "SiGmail", "type": "si" },
+    { "name": "WhatsApp", "reactIcon": "IoLogoWhatsapp", "type": "io" }
+  ],
+  "channel": [{ "name": "LinkedIn" }],
+  "AboutMeDescriptions": [
+    {
+      "id": "0",
+      "text": "A los 7 años, recibí mi primer PC Pentium Dual Core, lo que despertó mi pasión por la tecnología. A pesar de tener una conexión a internet de apenas 300 KB/s, me adentré en la exploración de la red y logré modificar y personalizar mi sistema operativo Windows XP manipulando sus archivos internos.",
+      "bgColor": "bg-purpleGrape-100"
+    },
+    {
+      "id": "1",
+      "text": "Aunque en varias ocasiones destrocé mi sistema operativo, investigando pude comprender las razones de sus fallos y las consecuencias en términos de seguridad, rendimiento y estructura de software. Esta necesidad de personalización despertó mi interés por el diseño gráfico.",
+      "bgColor": "bg-red-900"
+    },
+    {
+      "id": "2",
+      "text": "Esta experiencia me brindó un entendimiento relativamente intuitivo del software y la tecnología de PC, lo que me llevó a ampliar estos conocimientos a través de mi carrera profesional en Ingeniería en Multimedia. Durante este tiempo, he podido gestionar, desarrollar y publicar proyectos con éxito.",
+      "bgColor": "bg-red-500"
+    }
+  ]
+}
