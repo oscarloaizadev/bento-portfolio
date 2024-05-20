@@ -14,7 +14,7 @@ function BodyContent() {
               <p className="text-lg font-bold">Proyectos</p>
               <p>Portafolio y repositorio</p>
             </span>
-            <div className="flex flex-col gap-y-2">
+            <div className="grid grid-cols-2 lg:grid-cols-1 gap-y-2 gap-x-2">
               {data.portfolio.map((value, index) => (
                 <a key={index} className="bento p-0 cursor-pointer">
                   <StackEntry
@@ -24,19 +24,19 @@ function BodyContent() {
                     name={value.name}
                     reactIcon={value.reactIcon}
                     type={value.type}
-                    className="flex grow flex-[1_1_100%] px-2 items-center justify-center"
+                    className="flex grow flex-[1_1_100%] px-4 lg:px-2 items-center justify-center text-2xl lg:text-xl"
                   />
                 </a>
               ))}
             </div>
           </div>
 
-          <div className="flex flex-[1_1_100%] lg:flex-[1_1_25%] flex-row gap-x-2 gap-y-2">
-            <span className="bento flex-1 bg-lime-400 text-lime-950">
+          <div className="flex flex-row-reverse flex-[1_1_100%] lg:flex-[1_1_25%] lg:flex-row gap-x-2 gap-y-2">
+            <span className="bento text-right lg:text-left flex-1 bg-lime-400 text-lime-950">
               <p className="text-lg font-bold">Contacto</p>
               <p className="font-medium">Aquí podremos hablar fácilmente</p>
             </span>
-            <div className="flex flex-col gap-y-2">
+            <div className="grid grid-cols-2 lg:grid-cols-1 gap-y-2 gap-x-2">
               {data.contact.map((value, index) => (
                 <a key={index} className="bento p-0 cursor-pointer">
                   <StackEntry
@@ -46,7 +46,7 @@ function BodyContent() {
                     name={value.name}
                     reactIcon={value.reactIcon}
                     type={value.type}
-                    className="flex grow flex-[1_1_100%] px-2 items-center justify-center"
+                    className="flex grow flex-[1_1_100%] px-4 lg:px-2 items-center justify-center text-2xl lg:text-xl"
                   />
                 </a>
               ))}
@@ -55,10 +55,10 @@ function BodyContent() {
 
           <div className="flex flex-[1_1_100%] lg:flex-[1_1_25%] flex-row gap-x-2 gap-y-2">
             <span className="bento flex-1 bg-slate-700 text-slate-200">
-              <p className="text-lg font-bold">Redes</p>
-              <p>Un poco más sobre mí</p>
+              <p className="text-lg font-bold">Mis otras redes</p>
+              <p className="max-lg:hidden">Un poco más sobre mí</p>
             </span>
-            <div className="grid grid-cols-2 gap-y-2 gap-x-2">
+            <div className="grid grid-cols-4 lg:grid-cols-2 gap-y-2 gap-x-2">
               {data.social.map((value, index) => (
                 <a key={index} className="bento p-0 cursor-pointer">
                   <StackEntry
@@ -68,7 +68,7 @@ function BodyContent() {
                     name={value.name}
                     reactIcon={value.reactIcon}
                     type={value.type}
-                    className="flex flex-1 px-2 items-center justify-center"
+                    className="flex grow flex-[1_1_100%] px-4 lg:px-2 items-center justify-center text-2xl lg:text-xl"
                   />
                 </a>
               ))}

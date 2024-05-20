@@ -8,17 +8,18 @@ import SimpleSlider from "./SimpleSlider";
 function SideImage() {
   return (
     <>
-      <aside className="flex basis-full lg:basis-1/3 flex-col h-dvh max-h-100 top-0 md:sticky p-4">
-        <div className="h-full grid grid-rows-12 gap-4">
-          <section className="flex flex-col object-center row-span-9 relative bg-purpleGrape-100 rounded-2xl">
-            <div className="flex grow h-[60%] sm:h-[75%] md:h-full">
+      <aside className="flex basis-auto md:basis-[75%] lg:basis-[50%] flex-col min-h-dvh h-dvh top-0 md:sticky p-4">
+        <div className="h-full flex flex-col gap-4">
+          {/* Definimos filas automáticas y ajustables */}
+          <section className="flex flex-col basis-[100%] flex-grow object-center relative bg-purpleGrape-100 rounded-2xl overflow-hidden">
+            <div className="flex grow h-[50%] sm:h-[75%] md:h-full overflow-hidden">
               <Image
                 src="/images/yo.png"
                 alt="image"
                 blurDataURL
                 width={1000}
                 height={1000}
-                className="object-cover rounded-2xl object-center"
+                className="object-cover object-center rounded-2xl w-full h-full"
               />
             </div>
             <div className="absolute top-0 left-0 p-8 w-full h-full">
@@ -30,16 +31,17 @@ function SideImage() {
                 </div>
               </span>
             </div>
-            <p className="text-center md:text-left object-center text-3xl md:text-xl p-4 text-purpleGrape-950  [&>strong]:text-purpleGrape-950 [&>strong]:underline [&>strong]:decoration-purpleGrape-300 [&>strong]:decoration-wavy [&>strong]:font-black [&>strong]:decoration-2">
-              <strong>Ingeniero en Multimedia con enfásis en desarrollo web</strong> de Bogotá, Colombia <kbd>CO</kbd>.
+            <p className="text-center md:text-left object-center sm:text-xl p-4 text-purpleGrape-950  [&>strong]:text-purpleGrape-950 [&>strong]:underline [&>strong]:decoration-purpleGrape-200 [&>strong]:decoration-wavy [&>strong]:font-black [&>strong]:decoration-2">
+              <strong>Ingeniero en Multimedia con énfasis en desarrollo web</strong> de Bogotá, Colombia <kbd>CO</kbd>.
             </p>
           </section>
 
-          <section className="bento p-0 rounded-2xl row-span-3 relative">
+          <section className="bento text-pretty p-0 rounded-2xl relative flex-shrink-0">
             <SimpleSlider>
               {data.AboutMeDescriptions.map((value, index) => (
                 <p
-                  className={`font-light p-4 grow flex-[1_0_100%] text-xl md:text-base rounded-2xl me-[0.5rem] ${(() => {
+                  style={{ wordBreak: "break-word" }}
+                  className={`font-light p-4 grow flex-[1_0_100%] sm:text-xl md:text-base text-base rounded-2xl me-[0.5rem] ${(() => {
                     switch (index) {
                       case 0:
                         return "bg-purpleGrape-600 text-purpleGrape-50";

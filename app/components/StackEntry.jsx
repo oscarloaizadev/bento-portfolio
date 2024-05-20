@@ -88,7 +88,7 @@ function StackEntry({ index, value, name, reactIcon, type, className }) {
 
   return (
     <span className={"p-[6px] rounded-full " + bgColor + " " + className}>
-      <Icon className={textColor + " text-xl"} />
+      <Icon className={textColor} />
     </span>
   );
 }
