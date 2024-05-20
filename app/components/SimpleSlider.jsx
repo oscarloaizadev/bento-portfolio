@@ -1,3 +1,5 @@
+"use client";
+
 import { HiMiniArrowLongRight } from "react-icons/hi2";
 import { TbReload } from "react-icons/tb";
 import { useState, useEffect } from "react";
@@ -29,7 +31,7 @@ export default function Carousel({ children: slides, autoSlide = false, autoSlid
       <div className="absolute inset-0 flex items-center justify-between p-4">
         <button
           onClick={next}
-          className="p-1 absolute bottom-0 right-0 m-2 rotate-45 rounded-full text-white duration-300 ease-in-out transform bg-black hover:rotate-0 hover:scale-110"
+          className="p-1 absolute bottom-0 right-0 m-2 rotate-45 rounded-full text-white duration-300 ease-in-out transform bg-black opacity-50 hover:opacity-100 hover:rotate-0 hover:scale-110"
         >
           {isLastSlide ? <TbReload size={35} /> : <HiMiniArrowLongRight size={35} />}
         </button>

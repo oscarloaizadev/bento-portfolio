@@ -1,5 +1,3 @@
-"use client";
-
 import Image from "next/image";
 import React from "react";
 import data from "/public/assets/data/data.json";
@@ -36,7 +34,7 @@ function SideImage() {
             </p>
           </section>
 
-          <section className="bento text-pretty p-0 rounded-2xl relative flex-shrink-0">
+          <section className="bento text-pretty p-0 rounded-2xl overflow-hidden relative flex-shrink-0">
             <SimpleSlider>
               {data.AboutMeDescriptions.map((value, index) => (
                 <p

@@ -36,7 +36,6 @@
     { "name": "Gmail", "reactIcon": "SiGmail", "type": "si" },
     { "name": "WhatsApp", "reactIcon": "IoLogoWhatsapp", "type": "io" }
   ],
-  "channel": [{ "name": "LinkedIn" }],
   "AboutMeDescriptions": [
     {
       "id": "0",
@@ -52,6 +51,43 @@
       "id": "2",
       "text": "Esta experiencia me brindó un entendimiento relativamente intuitivo del software y la tecnología de PC, lo que me llevó a ampliar estos conocimientos a través de mi carrera profesional en Ingeniería en Multimedia. Durante este tiempo, he podido gestionar, desarrollar y publicar proyectos con éxito.",
       "bgColor": "bg-red-500"
+    }
+  ],
+  "experience": [
+    {
+      "id": "0",
+      "empresa": "Emtelco S.A.S",
+      "logo": "emtelco.png",
+      "cargo": "Ingeniero Multimedia y Desarrollador Web",
+      "contrato": "Pasantías",
+      "periodo": "Noviembre 2023 - Mayo 2024",
+      "descripcion": [
+        "Establecimiento de nuevos estándares de calidad en el área de Arquitectos AVA mediante la investigación y adopción de tecnologías web innovadoras.",
+        "Optimización de herramientas web para campañas BPO y CX de Alkosto, Keralty, Addi, BBVA, etc; mejorando tiempos de respuesta y eficiencia.",
+        "Reconocimiento por mi impacto positivo revitalizar y mejorar los aplicativos web existendes."
+      ]
+    },
+    {
+      "id": "1",
+      "empresa": "SOS Soluciones de Informática SAS",
+      "cargo": "Gestor de Proyectos e Ingeniero Multimedia",
+      "contrato": "Tiempo completo",
+      "periodo": "Mayo 2023 - Noviembre 2023",
+      "descripcion": [
+        "Apoyo en el análisis de incidencias y gestión de riesgos de manera efectiva.",
+        "Experiencia en la implementación y automatización de sistemas de gestión utilizando Jira Service Management, logrando una optimización eficiente de procesos y una gestión ágil de proyectos.",
+        "Creación de propuestas persuasivas y piezas multimedia cautivadoras para una comunicación visualmente impactante y efectiva."
+      ]
+    },
+    {
+      "id": "2",
+      "empresa": "SOS Soluciones de Informática SAS",
+      "cargo": "Help Desk Engineer | Soporte IT",
+      "contrato": "Tiempo parcial",
+      "periodo": "Mayo 2020 - Mayo 2023",
+      "descripcion": [
+        "Análisis de incidencias y control de riesgos mediante el apoyo en el mantenimiento preventivo de equipos de cómputo."
+      ]
     }
   ]
 }
