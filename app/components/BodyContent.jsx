@@ -45,7 +45,7 @@ function BodyContent() {
           </div>
 
           <div className="flex flex-row-reverse flex-[1_1_100%] lg:flex-[1_1_27%] lg:flex-row gap-x-2 gap-y-2">
-            <span className="bento text-right lg:text-left flex-1 bg-lime-400 text-lime-950">
+            <span className="bento text-right lg:text-left flex-1 bg-indigo-700 text-indigo-200">
               <p className="text-lg font-bold">Contacto</p>
               <p className="font-medium">Aquí podremos hablar fácilmente</p>
             </span>
@@ -89,7 +89,7 @@ function BodyContent() {
           </div>
 
           <div className="flex flex-[1_1_100%] lg:flex-[1_1_49%] flex-col gap-x-2 gap-y-2">
-            <span className="bento px-4 py-1 bg-purpleGrape-100 text-purpleGrape-950">
+            <span className="bento grow-0 px-4 py-1 bg-lime-300 text-lime-950">
               <p className="text-lg font-bold">Experiencia laboral</p>
             </span>
             <div className="bento text-pretty p-0 relative rounded-2xl overflow-hidden">
@@ -97,14 +97,14 @@ function BodyContent() {
                 {data.experience.map((value, index) => (
                   <div
                     style={{ wordBreak: "break-word" }}
-                    className={`font-light p-4 grow flex-[1_0_100%] sm:text-xl md:text-base text-base rounded-2xl me-[0.5rem] ${(() => {
+                    className={`p-4 grow flex-[1_0_100%] sm:text-xl md:text-base text-base rounded-2xl me-[0.5rem] ${(() => {
                       switch (index) {
                         case 0:
                           return "bg-[#08217f] text-[#d9e1ff]";
                         case 1:
-                          return "bg-indigo-700 text-indigo-50";
+                          return "bg-indigo-800 text-indigo-100";
                         case 2:
-                          return "bg-cyan-800 text-cyan-50";
+                          return "bg-violet-800 text-violet-100";
                         default:
                           return "";
                       }
@@ -123,14 +123,14 @@ function BodyContent() {
                         <span className="ps-2 text-lg font-semibold">
                           {value.cargo}
                           <span
-                            className={`rounded-md px-[6px] leading-0 py-[3px] text-xs ms-2 ${(() => {
+                            className={`rounded-md px-[6px] leading-0 py-[3px] text-xs font-black ms-2 ${(() => {
                               switch (index) {
                                 case 0:
-                                  return "bg-[#030d2e] text-[#d9e1ff]";
+                                  return "bg-[#bdcbff] text-[#030d2e]";
                                 case 1:
-                                  return "bg-indigo-700 text-indigo-50";
+                                  return "bg-indigo-200 text-indigo-900";
                                 case 2:
-                                  return "bg-cyan-800 text-cyan-50";
+                                  return "bg-violet-200 text-violet-800";
                                 default:
                                   return "";
                               }
@@ -147,7 +147,7 @@ function BodyContent() {
                     </div>
                     <ul className="ps-4">
                       {value.descripcion.map((item, i) => (
-                        <li className="list-outside list-disc" key={i}>
+                        <li className={`list-outside list-disc`} key={i}>
                           {item}
                         </li>
                       ))}{" "}
@@ -158,28 +158,71 @@ function BodyContent() {
             </div>
           </div>
 
-          <div className="flex flex-[1_1_100%] lg:flex-[1_1_48%] flex-row gap-x-2 gap-y-2">
+          <div className="flex flex-[1_1_100%] lg:flex-[1_1_49%] flex-col gap-x-2 gap-y-2">
+            <span className="bento grow-0 px-4 py-1 bg-sky-300 text-sky-950">
+              <p className="text-lg font-bold">Formación académica</p>
+            </span>
             <div className="bento text-pretty p-0 relative rounded-2xl overflow-hidden">
               <SimpleSlider>
-                {data.experience.map((value, index) => (
-                  <p
+                {data.grades.map((value, index) => (
+                  <div
                     style={{ wordBreak: "break-word" }}
-                    className={`font-light p-4 grow flex-[1_0_100%] sm:text-xl md:text-base text-base rounded-2xl me-[0.5rem] ${(() => {
+                    className={`p-4 grow flex-[1_0_100%] sm:text-xl md:text-base text-base rounded-2xl me-[0.5rem] ${(() => {
                       switch (index) {
                         case 0:
-                          return "bg-[#08217f] text-purpleGrape-50";
+                          return "bg-rose-950 text-rose-50";
                         case 1:
-                          return "bg-indigo-700 text-indigo-50";
+                          return "bg-indigo-800 text-indigo-100";
                         case 2:
-                          return "bg-cyan-800 text-cyan-50";
+                          return "bg-violet-800 text-violet-100";
                         default:
                           return "";
                       }
                     })()}`}
                     key={index}
                   >
-                    {value.descripcion}
-                  </p>
+                    <div className="mb-4">
+                      <div className="flex divide-x divide-white/50 items-center">
+                        <Image
+                          src={"/logos/" + value.logo}
+                          alt={value.empresa}
+                          width={100}
+                          height={100}
+                          className="me-2"
+                        />
+                        <span className="ps-2 text-lg font-semibold">
+                          {value.cargo}
+                          <span
+                            className={`rounded-md px-[6px] leading-0 py-[3px] text-xs font-black ms-2 ${(() => {
+                              switch (index) {
+                                case 0:
+                                  return "bg-rose-200 text-rose-950";
+                                case 1:
+                                  return "bg-indigo-200 text-indigo-900";
+                                case 2:
+                                  return "bg-violet-200 text-violet-800";
+                                default:
+                                  return "";
+                              }
+                            })()}`}
+                          >
+                            {value.contrato}
+                          </span>
+                        </span>
+                      </div>
+                      <div className="flex divide-x divide-white/50 items-end">
+                        <span className="pe-2 text-sm font-medium">{value.empresa}</span>
+                        <span className="ps-2 text-sm">{value.periodo}</span>
+                      </div>
+                    </div>
+                    <ul className="ps-4">
+                      {value.descripcion.map((item, i) => (
+                        <li className={`list-outside list-disc`} key={i}>
+                          {item}
+                        </li>
+                      ))}{" "}
+                    </ul>
+                  </div>
                 ))}
               </SimpleSlider>
             </div>

@@ -70,6 +70,7 @@
     {
       "id": "1",
       "empresa": "SOS Soluciones de Informática SAS",
+      "logo": "sos.png",
       "cargo": "Gestor de Proyectos e Ingeniero Multimedia",
       "contrato": "Tiempo completo",
       "periodo": "Mayo 2023 - Noviembre 2023",
@@ -82,11 +83,27 @@
     {
       "id": "2",
       "empresa": "SOS Soluciones de Informática SAS",
+      "logo": "sos.png",
       "cargo": "Help Desk Engineer | Soporte IT",
       "contrato": "Tiempo parcial",
       "periodo": "Mayo 2020 - Mayo 2023",
       "descripcion": [
         "Análisis de incidencias y control de riesgos mediante el apoyo en el mantenimiento preventivo de equipos de cómputo."
+      ]
+    }
+  ],
+  "grades": [
+    {
+      "id": "0",
+      "empresa": "Universidad Militar Nueva Granada",
+      "logo": "umng.png",
+      "cargo": "Ingeniero en Multimedia",
+      "contrato": "Formación formal",
+      "periodo": "Febrero 2018 - Mayo 2023",
+      "descripcion": [
+        "Apoyo en el análisis de incidencias y gestión de riesgos de manera efectiva.",
+        "Experiencia en la implementación y automatización de sistemas de gestión utilizando Jira Service Management, logrando una optimización eficiente de procesos y una gestión ágil de proyectos.",
+        "Creación de propuestas persuasivas y piezas multimedia cautivadoras para una comunicación visualmente impactante y efectiva."
       ]
     }
   ]
