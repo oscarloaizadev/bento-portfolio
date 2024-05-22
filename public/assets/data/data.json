@@ -1,26 +1,30 @@
 {
-  "projects": [
-    {
-      "name": "Project 1",
-      "description": "Project 1 description",
-      "year": 2024,
-      "new": true
-    },
-    {
-      "name": "Project 2",
-      "description": "Project 2 description",
-      "year": 2024
-    }
-  ],
   "stack": [
     { "name": "Bootstrap", "reactIcon": "FaBootstrap", "type": "fa" },
     { "name": "React", "reactIcon": "FaReact", "type": "fa" },
     { "name": "Sass", "reactIcon": "FaSass", "type": "fa" },
-    { "name": "JQuery", "reactIcon": "DiJqueryLogo", "type": "di" },
+    { "name": "JQuery", "reactIcon": "SiJquery", "type": "si" },
     { "name": "Javascript", "reactIcon": "RiJavascriptFill", "type": "ri" },
     { "name": "PHP", "reactIcon": "SiPhp", "type": "si" },
-    { "name": "Figma", "reactIcon": "FaFigma", "type": "fa" },
-    { "name": "MySql", "reactIcon": "SiMysql", "type": "si" }
+    { "name": "MySql", "reactIcon": "GrMysql", "type": "gr" },
+    { "name": "Jira", "reactIcon": "SiJira", "type": "si" },
+    { "name": "HTML", "reactIcon": "SiHtml5", "type": "si" },
+    { "name": "CSS", "reactIcon": "SiCss3", "type": "si" },
+    { "name": "NextJS", "reactIcon": "RiNextjsFill", "type": "ri" },
+    { "name": "TailwindCSS", "reactIcon": "SiTailwindcss", "type": "si" },
+    { "name": "Audition", "reactIcon": "SiAudition", "type": "si" }
+  ],
+  "design": [
+    { "name": "Figma", "reactIcon": "PiFigmaLogoDuotone", "type": "pi" },
+    { "name": "Blender", "reactIcon": "SiBlender", "type": "si" },
+    { "name": "Photoshop", "reactIcon": "SiAdobephotoshop", "type": "si" },
+    { "name": "Illustrator", "reactIcon": "SiAdobeillustrator", "type": "si" },
+    { "name": "Premiere", "reactIcon": "SiAdobepremierepro", "type": "si" },
+    { "name": "After", "reactIcon": "SiAdobeaftereffects", "type": "si" },
+    { "name": "Audition", "reactIcon": "SiAdobeaudition", "type": "si" },
+    { "name": "XD", "reactIcon": "FaAdobe", "type": "fa" },
+    { "name": "Figma", "reactIcon": "PiFigmaLogoDuotone", "type": "pi" },
+    { "name": "Canva", "reactIcon": "SiCanva", "type": "si" }
   ],
   "social": [
     { "name": "LinkedIn", "reactIcon": "FaLinkedin", "type": "fa" },
@@ -29,7 +33,7 @@
     { "name": "Facebook", "reactIcon": "FaFacebook", "type": "fa" }
   ],
   "portfolio": [
-    { "name": "GitHub", "reactIcon": "FaGithub", "type": "fa" },
+    { "name": "Github", "reactIcon": "FaGithub", "type": "fa" },
     { "name": "Behance", "reactIcon": "FaBehance ", "type": "fa" }
   ],
   "contact": [
@@ -53,6 +57,24 @@
       "bgColor": "bg-red-500"
     }
   ],
+  "personalLinks": [
+    {
+      "links": ["Github", "Behance"],
+      "src": ["githubURL", "behanceURL"]
+    },
+    {
+      "links": ["LinkedIn", "Instagram", "Youtube", "Facebook"],
+      "src": ["linkedinURL", "instagramURL", "youtubeURL", "facebookURL"]
+    },
+    {
+      "links": ["Gmail", "WhatsApp"],
+      "src": ["gmailURL", "whatsappURL"]
+    }
+  ],
+  "favoriteApps": {
+    "stack": ["Bootstrap", "PHP", "MySql", "NextJS", "TailwindCSS", "React"],
+    "design": ["Photoshop", "Illustrator", "Premiere", "After", "Audition", "Blender", "Canva"]
+  },
   "experience": [
     {
       "id": "0",
@@ -64,8 +86,13 @@
       "descripcion": [
         "Establecimiento de nuevos estándares de calidad en el área de Arquitectos AVA mediante la investigación y adopción de tecnologías web innovadoras.",
         "Optimización de herramientas web para campañas BPO y CX de Alkosto, Keralty, Addi, BBVA, etc; mejorando tiempos de respuesta y eficiencia.",
-        "Reconocimiento por mi impacto positivo revitalizar y mejorar los aplicativos web existendes."
-      ]
+        "Reconocimiento por mi impacto positivo revitalizar y mejorar los aplicativos web existendes.",
+        "Modelé y animé en 3D el personaje Winki, con el objetivo de crear plantillas para el área de e-learning."
+      ],
+      "width": "150",
+      "height": "150",
+      "stack": ["PHP", "MySql", "HTML", "CSS", "Sass", "Javascript", "JQuery", "Bootstrap"],
+      "design": ["Illustrator", "Canva", "Figma", "Blender"]
     },
     {
       "id": "1",
@@ -78,7 +105,11 @@
         "Apoyo en el análisis de incidencias y gestión de riesgos de manera efectiva.",
         "Experiencia en la implementación y automatización de sistemas de gestión utilizando Jira Service Management, logrando una optimización eficiente de procesos y una gestión ágil de proyectos.",
         "Creación de propuestas persuasivas y piezas multimedia cautivadoras para una comunicación visualmente impactante y efectiva."
-      ]
+      ],
+      "width": "200",
+      "height": "200",
+      "stack": ["Jira"],
+      "design": ["Illustrator", "Photoshop", "Premiere", "Figma"]
     },
     {
       "id": "2",
@@ -89,7 +120,10 @@
       "periodo": "Mayo 2020 - Mayo 2023",
       "descripcion": [
         "Análisis de incidencias y control de riesgos mediante el apoyo en el mantenimiento preventivo de equipos de cómputo."
-      ]
+      ],
+      "width": "200",
+      "height": "200",
+      "stack": ["Jira"]
     }
   ],
   "grades": [
@@ -101,10 +135,23 @@
       "contrato": "Formación formal",
       "periodo": "Febrero 2018 - Mayo 2023",
       "descripcion": [
-        "Apoyo en el análisis de incidencias y gestión de riesgos de manera efectiva.",
-        "Experiencia en la implementación y automatización de sistemas de gestión utilizando Jira Service Management, logrando una optimización eficiente de procesos y una gestión ágil de proyectos.",
-        "Creación de propuestas persuasivas y piezas multimedia cautivadoras para una comunicación visualmente impactante y efectiva."
-      ]
+        "Formación con un enfoque especializado en la experiencia de usuario a través de las diferentes tecnologías y herramientas de vanguardia de la actualidad, acompañados de un fuerte sentido del liderazgo para la gestión adecuada de los riesgos y del talento humano."
+      ],
+      "width": "100",
+      "height": "100"
+    },
+    {
+      "id": "1",
+      "empresa": "Laracast",
+      "logo": "laracast.svg",
+      "cargo": "PHP for beginners",
+      "contrato": "Formación informal",
+      "periodo": "Abril 2024",
+      "descripcion": [
+        "Durante el curso, aprendí los fundamentos de PHP y cómo aplicarlos para crear aplicaciones web dinámicas. Comencé con conceptos básicos y avancé hacia temas más complejos como el manejo de bases de datos MySQL, la seguridad, y la organización del código. Aprendí a construir aplicaciones completas, desde la manipulación de formularios hasta la autenticación de usuarios y la refactorización del código para mejorarlo."
+      ],
+      "width": "200",
+      "height": "200"
     }
   ]
 }

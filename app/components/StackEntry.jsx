@@ -5,6 +5,7 @@ import * as Ri from "react-icons/ri";
 import * as Si from "react-icons/si";
 import * as Di from "react-icons/di";
 import * as Fa6 from "react-icons/fa6";
+import * as Gr from "react-icons/gr";
 
 function StackEntry({ index, value, name, reactIcon, type, className }) {
   let Icon = "";
@@ -25,6 +26,8 @@ function StackEntry({ index, value, name, reactIcon, type, className }) {
     Icon = Di[trimmedReactIcon];
   } else if (type === "fa6") {
     Icon = Fa6[trimmedReactIcon];
+  } else if (type === "gr") {
+    Icon = Gr[trimmedReactIcon];
   }
 
   if (name === "Bootstrap") {
@@ -81,8 +84,11 @@ function StackEntry({ index, value, name, reactIcon, type, className }) {
   } else if (name === "Gmail") {
     bgColor = `bg-gmail/20`;
     textColor = `text-gmail`;
+  } else if (name === "Jira") {
+    bgColor = `bg-jira/20`;
+    textColor = `text-jira`;
   } else {
-    bgColor = `bg-red-400/20`;
+    bgColor = `bg-red-400`;
     textColor = `text-red-900`;
   }
 
@@ -94,13 +100,3 @@ function StackEntry({ index, value, name, reactIcon, type, className }) {
 }
 
 export default StackEntry;
-
-/*
-    <span className="flex justify-between w-full text-center align-middle items-center mb-1">
-      <span className={"p-[6px] rounded-full " + bgColor}>
-        <Icon className={textColor + " text-xl"} />
-      </span>
-      <p>{name}</p>
-      <p>Web design</p>
-    </span>
-*/

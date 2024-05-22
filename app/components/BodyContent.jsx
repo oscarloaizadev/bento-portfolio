@@ -1,11 +1,18 @@
 import React from "react";
 import StackEntry from "./StackEntry";
+import StackEntry_NEW from "./StackEntry_NEW";
 import data from "/public/assets/data/data.json";
 import { HiFolderDownload } from "react-icons/hi";
 import SimpleSlider from "./SimpleSlider";
-import Image from "next/image";
+import GradesFormation from "./GradesFormation";
 
 function BodyContent() {
+  const BG_GRADES = ["bg-lime-900 text-lime-50", "bg-lime-950 text-lime-50"];
+  const BADGE_GRADES = ["bg-lime-200 text-lime-900", "bg-lime-200 text-lime-900"];
+
+  const BG_EXPERIENCE = ["bg-blue-900 text-blue-100", "bg-blue-950 text-blue-200", "bg-blue-950 text-blue-200"];
+  const BADGE_EXPERIENCE = ["bg-blue-100 text-blue-900", "bg-blue-200 text-blue-950", "bg-blue-200 text-blue-950"];
+
   return (
     <section className="p-4 pt-0 md:p-4 md:ps-0">
       <div className="rounded-lg max-lg:justify-between font-light">
@@ -23,21 +30,17 @@ function BodyContent() {
           </a>
           {/* Portafolio y repositorios */}
           <div className="flex flex-[1_1_100%] lg:flex-[1_1_25%] flex-row gap-x-2 gap-y-2">
-            <span className="bento bg-purpleGrape-400 text-slate-200">
-              <p className="text-lg font-bold">Proyectos</p>
+            <span className="bento bg-magestic-200 text-magestic-950">
+              <p className="text-xl font-bold">Proyectos</p>
               <p>Portafolio y repositorio</p>
             </span>
             <div className="grid grid-cols-2 lg:grid-cols-1 gap-y-2 gap-x-2">
-              {data.portfolio.map((value, index) => (
-                <a key={index} className="bento p-0 cursor-pointer">
-                  <StackEntry
-                    key={index}
-                    index={index}
+              {data.personalLinks[0].links.map((value, index) => (
+                <a href={data.personalLinks[0].src[index]} key={index} className="bento grow p-0 cursor-pointer">
+                  <StackEntry_NEW
                     value={value}
-                    name={value.name}
-                    reactIcon={value.reactIcon}
-                    type={value.type}
-                    className="flex grow flex-[1_1_100%] px-4 lg:px-2 items-center justify-center text-2xl lg:text-xl"
+                    type="portfolio"
+                    className="flex grow flex-[1_1_100%] rounded-full px-4 lg:px-2 items-center justify-center"
                   />
                 </a>
               ))}
@@ -45,21 +48,17 @@ function BodyContent() {
           </div>
 
           <div className="flex flex-row-reverse flex-[1_1_100%] lg:flex-[1_1_27%] lg:flex-row gap-x-2 gap-y-2">
-            <span className="bento text-right lg:text-left flex-1 bg-indigo-700 text-indigo-200">
-              <p className="text-lg font-bold">Contacto</p>
-              <p className="font-medium">Aquí podremos hablar fácilmente</p>
+            <span className="bento text-right lg:text-left flex-1 bg-magestic-200 text-magestic-950">
+              <p className="text-xl font-bold">Contacto</p>
+              <p>Aquí podremos hablar fácilmente</p>
             </span>
             <div className="grid grid-cols-2 lg:grid-cols-1 gap-y-2 gap-x-2">
-              {data.contact.map((value, index) => (
-                <a key={index} className="bento p-0 cursor-pointer">
-                  <StackEntry
-                    key={index}
-                    index={index}
+              {data.personalLinks[2].links.map((value, index) => (
+                <a href={data.personalLinks[2].src[index]} key={index} className="bento grow p-0 cursor-pointer">
+                  <StackEntry_NEW
                     value={value}
-                    name={value.name}
-                    reactIcon={value.reactIcon}
-                    type={value.type}
-                    className="flex grow flex-[1_1_100%] px-4 lg:px-2 items-center justify-center text-2xl lg:text-xl"
+                    type="contact"
+                    className="flex grow flex-[1_1_100%] rounded-full px-4 lg:px-2 items-center justify-center"
                   />
                 </a>
               ))}
@@ -67,208 +66,135 @@ function BodyContent() {
           </div>
 
           <div className="flex flex-[1_1_100%] lg:flex-[1_1_25%] flex-row gap-x-2 gap-y-2">
-            <span className="bento flex-1 bg-slate-700 text-slate-200">
-              <p className="text-lg font-bold">Mis otras redes</p>
+            <span className="bento bg-magestic-200 text-magestic-950">
+              <p className="text-xl font-bold">Mis otras redes</p>
               <p className="max-lg:hidden">Un poco más sobre mí</p>
             </span>
             <div className="grid grid-cols-4 lg:grid-cols-2 gap-y-2 gap-x-2">
-              {data.social.map((value, index) => (
-                <a key={index} className="bento p-0 cursor-pointer">
-                  <StackEntry
-                    key={index}
-                    index={index}
+              {data.personalLinks[1].links.map((value, index) => (
+                <a href={data.personalLinks[1].src[index]} key={index} className="bento grow p-0 cursor-pointer">
+                  <StackEntry_NEW
                     value={value}
-                    name={value.name}
-                    reactIcon={value.reactIcon}
-                    type={value.type}
-                    className="flex grow flex-[1_1_100%] px-4 lg:px-2 items-center justify-center text-2xl lg:text-xl"
+                    type="social"
+                    className="flex grow flex-[1_1_100%] rounded-full px-4 lg:px-2 items-center justify-center"
                   />
                 </a>
               ))}
             </div>
           </div>
 
-          <div className="flex flex-[1_1_100%] lg:flex-[1_1_49%] flex-col gap-x-2 gap-y-2">
-            <span className="bento grow-0 px-4 py-1 bg-lime-300 text-lime-950">
-              <p className="text-lg font-bold">Experiencia laboral</p>
+          <div className="flex flex-[1_1_100%] lg:flex-[1_1_55%] xl:flex-[1_1_65%] flex-col gap-x-2 gap-y-2">
+            <span className="bento grow-0 bg-blue-800 text-blue-100">
+              <p className="text-xl font-bold text-center">Experiencia laboral</p>
             </span>
-            <div className="bento text-pretty p-0 relative rounded-2xl overflow-hidden">
+            <div className="bento text-pretty p-0 rounded-2xl overflow-hidden">
               <SimpleSlider>
-                {data.experience.map((value, index) => (
-                  <div
-                    style={{ wordBreak: "break-word" }}
-                    className={`p-4 grow flex-[1_0_100%] sm:text-xl md:text-base text-base rounded-2xl me-[0.5rem] ${(() => {
-                      switch (index) {
-                        case 0:
-                          return "bg-[#08217f] text-[#d9e1ff]";
-                        case 1:
-                          return "bg-indigo-800 text-indigo-100";
-                        case 2:
-                          return "bg-violet-800 text-violet-100";
-                        default:
-                          return "";
-                      }
-                    })()}`}
-                    key={index}
-                  >
-                    <div className="mb-4">
-                      <div className="flex divide-x divide-white/50 items-center">
-                        <Image
-                          src={"/logos/" + value.logo}
-                          alt={value.empresa}
-                          width={100}
-                          height={100}
-                          className="me-2"
-                        />
-                        <span className="ps-2 text-lg font-semibold">
-                          {value.cargo}
-                          <span
-                            className={`rounded-md px-[6px] leading-0 py-[3px] text-xs font-black ms-2 ${(() => {
-                              switch (index) {
-                                case 0:
-                                  return "bg-[#bdcbff] text-[#030d2e]";
-                                case 1:
-                                  return "bg-indigo-200 text-indigo-900";
-                                case 2:
-                                  return "bg-violet-200 text-violet-800";
-                                default:
-                                  return "";
-                              }
-                            })()}`}
-                          >
-                            {value.contrato}
-                          </span>
-                        </span>
-                      </div>
-                      <div className="flex divide-x divide-white/50 items-end">
-                        <span className="pe-2 text-sm font-medium">{value.empresa}</span>
-                        <span className="ps-2 text-sm">{value.periodo}</span>
-                      </div>
-                    </div>
-                    <ul className="ps-4">
-                      {value.descripcion.map((item, i) => (
-                        <li className={`list-outside list-disc`} key={i}>
-                          {item}
-                        </li>
-                      ))}{" "}
-                    </ul>
-                  </div>
-                ))}
+                <GradesFormation
+                  data={data.experience}
+                  backgroundColors={BG_EXPERIENCE}
+                  badgeColors={BADGE_EXPERIENCE}
+                />
               </SimpleSlider>
             </div>
           </div>
 
-          <div className="flex flex-[1_1_100%] lg:flex-[1_1_49%] flex-col gap-x-2 gap-y-2">
-            <span className="bento grow-0 px-4 py-1 bg-sky-300 text-sky-950">
-              <p className="text-lg font-bold">Formación académica</p>
+          <div className="flex flex-[1_1_100%] lg:flex-[1_1_40%] xl:flex-[1_1_34%] flex-col gap-x-2 gap-y-2">
+            <span className="bento grow-0 bg-lime-800 text-lime-100">
+              <p className="text-xl font-bold text-center">Formación académica</p>
             </span>
             <div className="bento text-pretty p-0 relative rounded-2xl overflow-hidden">
               <SimpleSlider>
-                {data.grades.map((value, index) => (
-                  <div
-                    style={{ wordBreak: "break-word" }}
-                    className={`p-4 grow flex-[1_0_100%] sm:text-xl md:text-base text-base rounded-2xl me-[0.5rem] ${(() => {
-                      switch (index) {
-                        case 0:
-                          return "bg-rose-950 text-rose-50";
-                        case 1:
-                          return "bg-indigo-800 text-indigo-100";
-                        case 2:
-                          return "bg-violet-800 text-violet-100";
-                        default:
-                          return "";
-                      }
-                    })()}`}
-                    key={index}
-                  >
-                    <div className="mb-4">
-                      <div className="flex divide-x divide-white/50 items-center">
-                        <Image
-                          src={"/logos/" + value.logo}
-                          alt={value.empresa}
-                          width={100}
-                          height={100}
-                          className="me-2"
-                        />
-                        <span className="ps-2 text-lg font-semibold">
-                          {value.cargo}
-                          <span
-                            className={`rounded-md px-[6px] leading-0 py-[3px] text-xs font-black ms-2 ${(() => {
-                              switch (index) {
-                                case 0:
-                                  return "bg-rose-200 text-rose-950";
-                                case 1:
-                                  return "bg-indigo-200 text-indigo-900";
-                                case 2:
-                                  return "bg-violet-200 text-violet-800";
-                                default:
-                                  return "";
-                              }
-                            })()}`}
-                          >
-                            {value.contrato}
-                          </span>
-                        </span>
-                      </div>
-                      <div className="flex divide-x divide-white/50 items-end">
-                        <span className="pe-2 text-sm font-medium">{value.empresa}</span>
-                        <span className="ps-2 text-sm">{value.periodo}</span>
-                      </div>
-                    </div>
-                    <ul className="ps-4">
-                      {value.descripcion.map((item, i) => (
-                        <li className={`list-outside list-disc`} key={i}>
-                          {item}
-                        </li>
-                      ))}{" "}
-                    </ul>
-                  </div>
-                ))}
+                <GradesFormation data={data.grades} backgroundColors={BG_GRADES} badgeColors={BADGE_GRADES} />
               </SimpleSlider>
             </div>
+          </div>
+
+          <div className="flex flex-row xl:flex-col flex-[1_1_100%] xl:flex-[1_1_15%] gap-x-2 gap-y-2">
+            <div className="flex flex-[1_1_49%] flex-row gap-x-2 gap-y-2">
+              <span className="bento p-2 xl:p-0 justify-center bg-cream-900 text-cream-200 items-center">
+                <p className="font-bold uppercase">Inglés</p>
+                <p className="text-xl font-bold">B2</p>
+              </span>
+            </div>
+
+            <div className="flex flex-[1_1_49%] flex-row gap-x-2 gap-y-2">
+              <span className="bento p-0 justify-center bg-cream-900 text-cream-200 items-center">
+                <p className="font-bold uppercase">Español</p>
+                <p className="text-xl font-bold">nativo</p>
+              </span>
+            </div>
+          </div>
+
+          <section className="flex flex-row  flex-[1_1_100%] lg:flex-[1_1_50%] xl:flex-[1_1_49%] gap-x-2 gap-y-2">
+            <div className="flex flex-[1_1_100%] xl:flex-[1_1_39%] gap-x-2 gap-y-2">
+              <span className="bento justify-center bg-purpleGrape-200 text-purpleGrape-900 items-center">
+                <p className="font-bold text-xl mb-4 text-center">Mi stack principal</p>
+                <div className="grid grid-cols-3 gap-x-2 gap-y-2">
+                  {data.favoriteApps.stack.slice(0, 3).map((value, index) => (
+                    <div key={index} className="bento grow flex-col p-0">
+                      <StackEntry_NEW
+                        value={value}
+                        type="stack"
+                        className="flex grow flex-[1_1_100%] rounded-2xl p-2 items-center justify-center [&>svg]:text-3xl"
+                      />
+                    </div>
+                  ))}
+                </div>
+              </span>
+            </div>
+
+            <div className="flex flex-[1_1_100%] xl:flex-[1_1_39%] gap-x-2 gap-y-2">
+              <span className="bento justify-center bg-purpleGrape-200 text-purpleGrape-900 items-center">
+                <p className="font-bold text-xl mb-4 text-center">Mi stack favorito</p>
+                <div className="grid grid-cols-3 gap-x-2 gap-y-2">
+                  {data.favoriteApps.stack.slice(3, 6).map((value, index) => (
+                    <div key={index} className="bento grow flex-col p-0">
+                      <StackEntry_NEW
+                        value={value}
+                        type="stack"
+                        className="flex grow flex-[1_1_100%] rounded-2xl p-2 items-center justify-center [&>svg]:text-3xl"
+                      />
+                    </div>
+                  ))}
+                </div>
+              </span>
+            </div>
+          </section>
+
+          <div className="flex flex-[1_1_100%] xl:flex-[1_1_34%] gap-x-2 gap-y-2 w-full">
+            <span className="bento justify-center bg-magestic-700 text-magestic-100 items-center w-full">
+              <p className="font-bold text-xl text-center mb-4">Suelo diseñar con</p>
+              <div className="grid grid-cols-7 xl:grid-cols-4 gap-x-2 gap-y-2">
+                {data.favoriteApps.design.map((value, index) => (
+                  <div key={index} className="bento grow flex-col p-0">
+                    <StackEntry_NEW
+                      value={value}
+                      type="design"
+                      className="flex grow flex-[1_1_100%] rounded-2xl p-3 items-center justify-center [&>svg]:text-2xl"
+                    />
+                  </div>
+                ))}
+              </div>
+            </span>
+          </div>
+
+          <div className="flex flex-[1_1_100%] xl:flex-[1_1_39%] gap-x-2 gap-y-2">
+            <span className="bento justify-center bg-purpleGrape-200 text-purpleGrape-900 items-center">
+              <p className="font-bold text-xl mb-4 text-center">Proyectos</p>
+              <div className="grid grid-cols-3 gap-x-2 gap-y-2">
+                {data.favoriteApps.stack.slice(3, 6).map((value, index) => (
+                  <div key={index} className="bento grow flex-col p-0">
+                    <StackEntry_NEW
+                      value={value}
+                      type="stack"
+                      className="flex grow flex-[1_1_100%] rounded-2xl p-2 items-center justify-center [&>svg]:text-3xl"
+                    />
+                  </div>
+                ))}
+              </div>
+            </span>
           </div>
         </section>
-
-        <div className="md:mt-3 flex w-full max-lg:justify-center max-lg:items-start flex-wrap gap-x-4">
-          <div className="md:max-w-[200px] w-full">
-            <p className="text-lg font-semibold">Proyectos</p>
-            {data.projects.map((project, index) => (
-              <span key={index} className="flex justify-between w-full my-1">
-                <p>
-                  <span>
-                    {project.name}
-                    {project.new && (
-                      <span className="whitespace-nowrap rounded-md px-[6px] leading-0 ml-2 py-[3px] text-purpleGrape-300 text-xs ms-2 font-bold bg-purpleGrape-800">
-                        Nuevo
-                      </span>
-                    )}
-                  </span>
-                </p>
-                <p className="opacity-50">{project.year}</p>
-              </span>
-            ))}
-          </div>
-
-          <div className="w-full md:max-w-[210px]">
-            <p className="text-lg font-semibold">Stack</p>
-            {data.stack.map((value, index) => (
-              <>
-                <span className="flex justify-between w-full text-center align-middle items-center mb-1">
-                  <StackEntry
-                    key={index}
-                    index={index}
-                    value={value}
-                    name={value.name}
-                    reactIcon={value.reactIcon}
-                    type={value.type}
-                  />
-                  <p>{value.name}</p>
-                  <p>Web design</p>
-                </span>
-              </>
-            ))}
-          </div>
-        </div>
       </div>
     </section>
   );

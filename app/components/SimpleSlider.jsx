@@ -19,16 +19,18 @@ export default function Carousel({ children: slides, autoSlide = false, autoSlid
   const isLastSlide = curr === slides.length - 1;
 
   return (
-    <div className="overflow-hidden flex grow">
+    <div className="overflow-hidden flex grow relative">
       <div
         className="flex grow text-pretty transition-transform ease-out duration-500 relative rounded-2xl"
-        style={{ transform: `translateX(-${curr * 100}%) ${curr !== 0 ? `translateX(calc(-0.5 * ${curr}rem))` : ""}` }}
+        style={{
+          transform: `translateX(-${curr * 100}%) ${curr !== 0 ? `translateX(calc(-0.5 * ${curr}rem))` : ""}`,
+        }}
       >
         {slides}
       </div>
 
       {/* Arrows */}
-      <div className="absolute inset-0 flex items-center justify-between p-4">
+      <div className="absolute inset-0 items-center justify-between p-4">
         <button
           onClick={next}
           className="p-1 absolute bottom-0 right-0 m-2 rotate-45 rounded-full text-white duration-300 ease-in-out transform bg-black opacity-50 hover:opacity-100 hover:rotate-0 hover:scale-110"
