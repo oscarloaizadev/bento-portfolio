@@ -9,4 +9,40 @@
   .bento {
     @apply flex flex-col grow justify-between text-left py-2 px-4 lg:p-4 rounded-2xl text-wrap;
   }
+  .complement-translate {
+    @apply transition-all animate-[translate-y-1_1200ms_cubic-bezier(0.16,_1,_0.3,_1)_0ms_backwards];
+  }
+  .initial-translate {
+    @apply transition-all animate-[translate-y-1_1800ms_cubic-bezier(0.16,_1,_0.3,_1)_0ms_backwards];
+  }
+  .initial-translate-2000ms {
+    @apply transition-all animate-[translate-y-1_2000ms_cubic-bezier(0.16,_1,_0.3,_1)_0ms_backwards];
+  }
+  .initial-translate-2200ms {
+    @apply transition-all animate-[translate-y-1_2200ms_cubic-bezier(0.16,_1,_0.3,_1)_0ms_backwards];
+  }
+  .initial-translate-2400ms {
+    @apply transition-all animate-[translate-y-1_2400ms_cubic-bezier(0.16,_1,_0.3,_1)_0ms_backwards];
+  }
+  .initial-translate-2600ms {
+    @apply transition-all animate-[translate-y-1_2600ms_cubic-bezier(0.16,_1,_0.3,_1)_0ms_backwards];
+  }
+  .initial-translate-2800ms {
+    @apply transition-all animate-[translate-y-1_2800ms_cubic-bezier(0.16,_1,_0.3,_1)_0ms_backwards];
+  }
+  .initial-translate-3000ms {
+    @apply transition-all animate-[translate-y-1_3000ms_cubic-bezier(0.16,_1,_0.3,_1)_0ms_backwards];
+  }
+  .initial-translate-3200ms {
+    @apply transition-all animate-[translate-y-1_3200ms_cubic-bezier(0.16,_1,_0.3,_1)_0ms_backwards];
+  }
+  .initial-translate-3400ms {
+    @apply transition-all animate-[translate-y-1_3400ms_cubic-bezier(0.16,_1,_0.3,_1)_0ms_backwards];
+  }
+  .initial-translate-3600ms {
+    @apply transition-all animate-[translate-y-1_3600ms_cubic-bezier(0.16,_1,_0.3,_1)_0ms_backwards];
+  }
+  .initial-translate-3800ms {
+    @apply transition-all animate-[translate-y-1_3800ms_cubic-bezier(0.16,_1,_0.3,_1)_0ms_backwards];
+  }
 }

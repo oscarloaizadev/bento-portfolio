@@ -14,11 +14,11 @@ function BodyContent() {
   const BADGE_EXPERIENCE = ["bg-blue-100 text-blue-900", "bg-blue-200 text-blue-950", "bg-blue-200 text-blue-950"];
 
   return (
-    <section className="p-4 pt-0 md:p-4 md:ps-0">
+    <section className="p-4 pt-0 md:p-4 md:ps-0 initial-translate">
       <div className="rounded-lg max-lg:justify-between font-light">
         <section className="flex w-full max-lg:justify-center max-lg:items-start flex-wrap gap-x-2 gap-y-2">
           <a
-            className="bento p-0 relative flex-[1_0_100%] overflow-hidden rounded-full drop-shadow-md"
+            className="initial-translate-3600ms bento p-0 relative flex-[1_0_100%] overflow-hidden rounded-full drop-shadow-md shadow-md duration-300 transition ease-out hover:shadow-yellow-200/50"
             href="assets/documents/cv.pdf"
             download={"(2024) Oscar Loaiza CV.pdf"}
           >
@@ -29,10 +29,10 @@ function BodyContent() {
             </div>
           </a>
           {/* Portafolio y repositorios */}
-          <div className="flex flex-[1_1_100%] lg:flex-[1_1_25%] flex-row gap-x-2 gap-y-2">
-            <span className="bento bg-magestic-200 text-magestic-950">
+          <div className="initial-translate-3400ms flex flex-[1_1_100%] lg:flex-[1_1_25%] flex-row gap-x-2 gap-y-2">
+            <span className="complement-translate bento bg-magestic-200 text-magestic-950">
               <p className="text-xl font-bold">Proyectos</p>
-              <p>Portafolio y repositorio</p>
+              <p className="max-sm:hidden">Portafolio y repositorio</p>
             </span>
             <div className="grid grid-cols-2 lg:grid-cols-1 gap-y-2 gap-x-2">
               {data.personalLinks[0].links.map((value, index) => (
@@ -40,17 +40,17 @@ function BodyContent() {
                   <StackEntry_NEW
                     value={value}
                     type="portfolio"
-                    className="flex grow flex-[1_1_100%] rounded-full px-4 lg:px-2 items-center justify-center"
+                    className="complement-translate flex grow flex-[1_1_100%] rounded-full px-4 lg:px-2 items-center justify-center"
                   />
                 </a>
               ))}
             </div>
           </div>
 
-          <div className="flex flex-row-reverse flex-[1_1_100%] lg:flex-[1_1_27%] lg:flex-row gap-x-2 gap-y-2">
-            <span className="bento text-right lg:text-left flex-1 bg-magestic-200 text-magestic-950">
+          <div className="initial-translate-3200ms flex flex-row-reverse flex-[1_1_100%] lg:flex-[1_1_27%] lg:flex-row gap-x-2 gap-y-2">
+            <span className="complement-translate bento text-right lg:text-left flex-1 bg-magestic-200 text-magestic-950">
               <p className="text-xl font-bold">Contacto</p>
-              <p>Aquí podremos hablar fácilmente</p>
+              <p className="max-sm:hidden">Aquí podremos hablar fácilmente</p>
             </span>
             <div className="grid grid-cols-2 lg:grid-cols-1 gap-y-2 gap-x-2">
               {data.personalLinks[2].links.map((value, index) => (
@@ -58,36 +58,39 @@ function BodyContent() {
                   <StackEntry_NEW
                     value={value}
                     type="contact"
-                    className="flex grow flex-[1_1_100%] rounded-full px-4 lg:px-2 items-center justify-center"
+                    className="complement-translate flex grow flex-[1_1_100%] rounded-full px-4 lg:px-2 items-center justify-center"
                   />
                 </a>
               ))}
             </div>
           </div>
 
-          <div className="flex flex-[1_1_100%] lg:flex-[1_1_25%] flex-row gap-x-2 gap-y-2">
-            <span className="bento bg-magestic-200 text-magestic-950">
+          <div className="initial-translate-3000ms flex flex-[1_1_100%] lg:flex-[1_1_25%] flex-row gap-x-2 gap-y-2">
+            <span className="complement-translate bento justify-center bg-magestic-200 text-magestic-950">
               <p className="text-xl font-bold">Mis otras redes</p>
-              <p className="max-lg:hidden">Un poco más sobre mí</p>
             </span>
-            <div className="grid grid-cols-4 lg:grid-cols-2 gap-y-2 gap-x-2">
+            <div className="grid grid-cols-2 gap-y-2 gap-x-2">
               {data.personalLinks[1].links.map((value, index) => (
-                <a href={data.personalLinks[1].src[index]} key={index} className="bento grow p-0 cursor-pointer">
+                <a
+                  href={data.personalLinks[1].src[index]}
+                  key={index}
+                  className="bento grow p-0 cursor-pointer hover:scale-105 hover:transition duration-300 ease-in-out"
+                >
                   <StackEntry_NEW
                     value={value}
                     type="social"
-                    className="flex grow flex-[1_1_100%] rounded-full px-4 lg:px-2 items-center justify-center"
+                    className="complement-translate flex grow flex-[1_1_100%] rounded-full px-4 py-2 lg:px-2 items-center justify-center"
                   />
                 </a>
               ))}
             </div>
           </div>
 
-          <div className="flex flex-[1_1_100%] lg:flex-[1_1_55%] xl:flex-[1_1_65%] flex-col gap-x-2 gap-y-2">
-            <span className="bento grow-0 bg-blue-800 text-blue-100">
+          <div className="initial-translate-2800ms flex flex-[1_1_100%] lg:flex-[1_1_55%] xl:flex-[1_1_65%] flex-col gap-x-2 gap-y-2">
+            <span className="hidden bento grow-0 bg-blue-800 text-blue-100">
               <p className="text-xl font-bold text-center">Experiencia laboral</p>
             </span>
-            <div className="bento text-pretty p-0 rounded-2xl overflow-hidden">
+            <div className="bento text-pretty p-0 rounded-2xl overflow-hidden touch-pan-x">
               <SimpleSlider>
                 <GradesFormation
                   data={data.experience}
@@ -98,8 +101,8 @@ function BodyContent() {
             </div>
           </div>
 
-          <div className="flex flex-[1_1_100%] lg:flex-[1_1_40%] xl:flex-[1_1_34%] flex-col gap-x-2 gap-y-2">
-            <span className="bento grow-0 bg-lime-800 text-lime-100">
+          <div className="initial-translate-2600ms flex flex-[1_1_100%] lg:flex-[1_1_40%] xl:flex-[1_1_34%] flex-col gap-x-2 gap-y-2">
+            <span className="hidden bento grow-0 bg-lime-800 text-lime-100">
               <p className="text-xl font-bold text-center">Formación académica</p>
             </span>
             <div className="bento text-pretty p-0 relative rounded-2xl overflow-hidden">
@@ -109,8 +112,8 @@ function BodyContent() {
             </div>
           </div>
 
-          <div className="flex flex-row xl:flex-col flex-[1_1_100%] xl:flex-[1_1_15%] gap-x-2 gap-y-2">
-            <div className="flex flex-[1_1_49%] flex-row gap-x-2 gap-y-2">
+          <div className="initial-translate-2400ms flex flex-row xl:flex-col flex-[1_1_100%] xl:flex-[1_1_15%] gap-x-2 gap-y-2">
+            <div className="complement-translate flex flex-[1_1_49%] flex-row gap-x-2 gap-y-2">
               <span className="bento p-2 xl:p-0 justify-center bg-cream-900 text-cream-200 items-center">
                 <p className="font-bold uppercase">Inglés</p>
                 <p className="text-xl font-bold">B2</p>
@@ -125,17 +128,17 @@ function BodyContent() {
             </div>
           </div>
 
-          <section className="flex flex-row  flex-[1_1_100%] lg:flex-[1_1_50%] xl:flex-[1_1_49%] gap-x-2 gap-y-2">
+          <div className="initial-translate-2200ms flex flex-row  flex-[1_1_100%] lg:flex-[1_1_50%] xl:flex-[1_1_49%] gap-x-2 gap-y-2">
             <div className="flex flex-[1_1_100%] xl:flex-[1_1_39%] gap-x-2 gap-y-2">
               <span className="bento justify-center bg-purpleGrape-200 text-purpleGrape-900 items-center">
-                <p className="font-bold text-xl mb-4 text-center">Mi stack principal</p>
-                <div className="grid grid-cols-3 gap-x-2 gap-y-2">
+                <p className="complement-translate font-bold text-xl mb-4 text-center">Mi stack principal</p>
+                <div className="complement-translate grid grid-cols-3 gap-x-2 gap-y-2">
                   {data.favoriteApps.stack.slice(0, 3).map((value, index) => (
                     <div key={index} className="bento grow flex-col p-0">
                       <StackEntry_NEW
                         value={value}
                         type="stack"
-                        className="flex grow flex-[1_1_100%] rounded-2xl p-2 items-center justify-center [&>svg]:text-3xl"
+                        className="complement-translate flex grow flex-[1_1_100%] rounded-2xl p-2 sm:p-3 items-center justify-center [&>svg]:text-3xl"
                       />
                     </div>
                   ))}
@@ -145,32 +148,32 @@ function BodyContent() {
 
             <div className="flex flex-[1_1_100%] xl:flex-[1_1_39%] gap-x-2 gap-y-2">
               <span className="bento justify-center bg-purpleGrape-200 text-purpleGrape-900 items-center">
-                <p className="font-bold text-xl mb-4 text-center">Mi stack favorito</p>
-                <div className="grid grid-cols-3 gap-x-2 gap-y-2">
+                <p className=" complement-translate font-bold text-xl mb-4 text-center">Mi stack favorito</p>
+                <div className=" complement-translate grid grid-cols-3 gap-x-2 gap-y-2">
                   {data.favoriteApps.stack.slice(3, 6).map((value, index) => (
                     <div key={index} className="bento grow flex-col p-0">
                       <StackEntry_NEW
                         value={value}
                         type="stack"
-                        className="flex grow flex-[1_1_100%] rounded-2xl p-2 items-center justify-center [&>svg]:text-3xl"
+                        className=" complement-translate flex grow flex-[1_1_100%] rounded-2xl p-2 sm:p-3 items-center justify-center [&>svg]:text-3xl"
                       />
                     </div>
                   ))}
                 </div>
               </span>
             </div>
-          </section>
+          </div>
 
-          <div className="flex flex-[1_1_100%] xl:flex-[1_1_34%] gap-x-2 gap-y-2 w-full">
+          <div className="initial-translate-2000ms flex flex-[1_1_100%] xl:flex-[1_1_34%] gap-x-2 gap-y-2 w-full">
             <span className="bento justify-center bg-magestic-700 text-magestic-100 items-center w-full">
-              <p className="font-bold text-xl text-center mb-4">Suelo diseñar con</p>
-              <div className="grid grid-cols-7 xl:grid-cols-4 gap-x-2 gap-y-2">
+              <p className="complement-translate font-bold text-xl text-center mb-2 sm:mb-4">Suelo diseñar con</p>
+              <div className="complement-translate grid grid-cols-7 xl:grid-cols-4 gap-x-2 gap-y-2">
                 {data.favoriteApps.design.map((value, index) => (
                   <div key={index} className="bento grow flex-col p-0">
                     <StackEntry_NEW
                       value={value}
                       type="design"
-                      className="flex grow flex-[1_1_100%] rounded-2xl p-3 items-center justify-center [&>svg]:text-2xl"
+                      className="complement-translate flex grow flex-[1_1_100%] rounded-2xl p-2 sm:p-3 items-center justify-center [&>svg]:text-2xl"
                     />
                   </div>
                 ))}
@@ -178,16 +181,16 @@ function BodyContent() {
             </span>
           </div>
 
-          <div className="flex flex-[1_1_100%] xl:flex-[1_1_39%] gap-x-2 gap-y-2">
+          <div className="initial-translate flex flex-[1_1_100%] xl:flex-[1_1_39%] gap-x-2 gap-y-2">
             <span className="bento justify-center bg-purpleGrape-200 text-purpleGrape-900 items-center">
-              <p className="font-bold text-xl mb-4 text-center">Proyectos</p>
-              <div className="grid grid-cols-3 gap-x-2 gap-y-2">
+              <p className="complement-translate font-bold text-xl mb-4 text-center">Proyectos</p>
+              <div className="complement-translate grid grid-cols-3 gap-x-2 gap-y-2">
                 {data.favoriteApps.stack.slice(3, 6).map((value, index) => (
                   <div key={index} className="bento grow flex-col p-0">
                     <StackEntry_NEW
                       value={value}
                       type="stack"
-                      className="flex grow flex-[1_1_100%] rounded-2xl p-2 items-center justify-center [&>svg]:text-3xl"
+                      className="complement-translate flex grow flex-[1_1_100%] rounded-2xl p-2 items-center justify-center [&>svg]:text-3xl"
                     />
                   </div>
                 ))}

@@ -7,8 +7,23 @@ module.exports = {
   ],
   theme: {
     extend: {
-      wordwrap: {
-        "word-wrap": "break-word",
+      keyframes: {
+        appear: {
+          "0%": {
+            opacity: "0",
+          },
+          "100%": {
+            opacity: "1",
+          },
+        },
+        "translate-y-1": {
+          "0%": {
+            transform: "translateY(-200px)",
+          },
+          "100%": {
+            transform: "translateY(0px)",
+          },
+        },
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",

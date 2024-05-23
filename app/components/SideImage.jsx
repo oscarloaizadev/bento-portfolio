@@ -6,18 +6,19 @@ import SimpleSlider from "./SimpleSlider";
 function SideImage() {
   return (
     <>
-      <aside className="flex basis-auto md:basis-[75%] lg:basis-[50%] flex-col min-h-dvh h-dvh top-0 md:sticky p-4">
-        <div className="h-full flex flex-col gap-4">
+      <aside className="initial-translate flex basis-auto md:basis-[75%] lg:basis-[50%] flex-col min-h-dvh h-dvh top-0 md:sticky p-4 sm:p-2 sm:py-4">
+        <div className="h-full flex flex-col gap-2">
           {/* Definimos filas automáticas y ajustables */}
-          <section className="flex flex-col basis-[100%] flex-grow object-center relative bg-purpleGrape-100 rounded-2xl overflow-hidden">
+          <section className="initial-translate flex flex-col basis-[100%] flex-grow object-center relative bg-purpleGrape-100 rounded-2xl overflow-hidden">
             <div className="flex grow h-[50%] sm:h-[75%] md:h-full overflow-hidden">
               <Image
-                src="/images/yo.png"
+                src="/images/yo_3.png"
                 alt="image"
                 blurDataURL
                 width={1000}
                 height={1000}
-                className="object-cover object-center rounded-2xl w-full h-full"
+                className="object-cover object-middle rounded-2xl w-full h-full"
+                priority={true}
               />
             </div>
             <div className="absolute top-0 left-0 p-8 w-full h-full">
@@ -39,7 +40,7 @@ function SideImage() {
               {data.AboutMeDescriptions.map((value, index) => (
                 <p
                   style={{ wordBreak: "break-word" }}
-                  className={`font-light p-4 grow flex-[1_0_100%] sm:text-xl md:text-base text-base rounded-2xl me-[0.5rem] ${(() => {
+                  className={`font-light p-4 pb-16 grow flex-[1_0_100%] sm:text-xl md:text-base text-base rounded-2xl me-[0.5rem] ${(() => {
                     switch (index) {
                       case 0:
                         return "bg-purpleGrape-600 text-purpleGrape-50";

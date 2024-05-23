@@ -62,7 +62,12 @@ const colorMap = {
   default: { bgColor: "bg-red-400", textColor: "text-red-900" },
 };
 
-function StackEntry({ value, type, className = "" }) {
+function StackEntry({
+  value,
+  type,
+  className = "",
+  textClassName = "hover:transition hover:-translate-y-[2px] hover:scale-[1.05] duration-300 ease-in-out",
+}) {
   const item = data[type] ? data[type].find((item) => item.name === value) : false;
 
   if (!item) {
@@ -75,7 +80,9 @@ function StackEntry({ value, type, className = "" }) {
 
   return (
     <span className={`${bgColor} ${className}`}>
-      {IconComponent && <IconComponent className={`text-2xl drop-shadow-sm ${textColor}`} />}
+      {IconComponent && (
+        <IconComponent className={`h-full w-full text-2xl drop-shadow-sm ${textColor} ${textClassName}`} />
+      )}
     </span>
   );
 }

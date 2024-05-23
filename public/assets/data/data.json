@@ -60,15 +60,23 @@
   "personalLinks": [
     {
       "links": ["Github", "Behance"],
-      "src": ["githubURL", "behanceURL"]
+      "src": ["https://github.com/oscarloaizadev", "https://www.behance.net/oscar_loaiza?log_shim_removal=1"]
     },
     {
       "links": ["LinkedIn", "Instagram", "Youtube", "Facebook"],
-      "src": ["linkedinURL", "instagramURL", "youtubeURL", "facebookURL"]
+      "src": [
+        "https://www.linkedin.com/in/oscarloaiza/",
+        "https://www.instagram.com/_alter.psd/",
+        "https://www.youtube.com/@alterskip7692",
+        "https://www.facebook.com/oscar.loaiza.69/"
+      ]
     },
     {
       "links": ["Gmail", "WhatsApp"],
-      "src": ["gmailURL", "whatsappURL"]
+      "src": [
+        "mailto:oscarloaiza.oelc@gmail.com?subject=%C2%A1Hola%20Oscar!%20%3B)",
+        "https://api.whatsapp.com/send/?phone=573045540008&text=Hola+Oscar%2C+te+vi+a+trav%C3%A9s+de+tu+p%C3%A1gina+web+y+quisiera+poder+hablar+contigo.&type=phone_number&app_absent=0"
+      ]
     }
   ],
   "favoriteApps": {
