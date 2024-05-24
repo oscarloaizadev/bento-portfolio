@@ -12,7 +12,7 @@ function SideImage() {
           <section className="initial-translate flex flex-col basis-[100%] flex-grow object-center relative bg-purpleGrape-100 rounded-2xl overflow-hidden">
             <div className="flex grow h-[50%] sm:h-[75%] md:h-full overflow-hidden">
               <Image
-                src="/images/yo_3.png"
+                src="/images/yo.png"
                 alt="image"
                 blurDataURL
                 width={1000}
@@ -21,8 +21,12 @@ function SideImage() {
                 priority={true}
               />
             </div>
-            <div className="absolute top-0 left-0 p-8 w-full h-full">
-              <p className="text-4xl font-bold drop-shadow-md">Hola, soy Oscar</p>
+            <div className="absolute top-0 left-0 p-8 w-full h-full text-end">
+              <p className="text-4xl sm:text-6xl md:text-4xl xl:text-5xl 2xl:text-6xl font-bold drop-shadow text-white [&>span]:underline [&>span]:decoration-purpleGrape-400 [&>span]:decoration-wavy [&>span]:decoration-2">
+                ¡Hola! 🦑
+                <br />
+                soy <span>Oscar</span>
+              </p>
               <span className="relative inline-block overflow-hidden rounded-full p-[0px] mt-2 drop-shadow-md">
                 <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#93C54B_0%,#5F9937_25%,#3D6F25_50%,#5F9937_75%,#93C54B_100%)]" />
                 <div className="inline-flex h-full w-full items-center justify-center rounded-full px-3 py-1 text-xs font-medium bg-black/70 text-lime-200 backdrop-blur-3xl">

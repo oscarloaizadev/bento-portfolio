@@ -5,6 +5,7 @@ import data from "/public/assets/data/data.json";
 import { HiFolderDownload } from "react-icons/hi";
 import SimpleSlider from "./SimpleSlider";
 import GradesFormation from "./GradesFormation";
+import ProjectLoader from "./ProjectLoader";
 
 function BodyContent() {
   const BG_GRADES = ["bg-lime-900 text-lime-50", "bg-lime-950 text-lime-50"];
@@ -90,7 +91,7 @@ function BodyContent() {
             <span className="hidden bento grow-0 bg-blue-800 text-blue-100">
               <p className="text-xl font-bold text-center">Experiencia laboral</p>
             </span>
-            <div className="bento text-pretty p-0 rounded-2xl overflow-hidden touch-pan-x">
+            <div className="bento text-pretty p-0 rounded-2xl overflow-hidden">
               <SimpleSlider>
                 <GradesFormation
                   data={data.experience}
@@ -181,21 +182,8 @@ function BodyContent() {
             </span>
           </div>
 
-          <div className="initial-translate flex flex-[1_1_100%] xl:flex-[1_1_39%] gap-x-2 gap-y-2">
-            <span className="bento justify-center bg-purpleGrape-200 text-purpleGrape-900 items-center">
-              <p className="complement-translate font-bold text-xl mb-4 text-center">Proyectos</p>
-              <div className="complement-translate grid grid-cols-3 gap-x-2 gap-y-2">
-                {data.favoriteApps.stack.slice(3, 6).map((value, index) => (
-                  <div key={index} className="bento grow flex-col p-0">
-                    <StackEntry_NEW
-                      value={value}
-                      type="stack"
-                      className="complement-translate flex grow flex-[1_1_100%] rounded-2xl p-2 items-center justify-center [&>svg]:text-3xl"
-                    />
-                  </div>
-                ))}
-              </div>
-            </span>
+          <div className="initial-translate-2000ms flex flex-[1_1_100%] gap-x-2 gap-y-2 w-full">
+            <ProjectLoader />
           </div>
         </section>
       </div>

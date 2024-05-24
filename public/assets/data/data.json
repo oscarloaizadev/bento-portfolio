@@ -161,5 +161,28 @@
       "width": "200",
       "height": "200"
     }
+  ],
+  "projects": [
+    {
+      "id": "0",
+      "title": "Sistema de gestión de recursos gráficos",
+      "description": [
+        "Evidencia 1",
+        "Evidencia 2",
+        "Evidencia 3",
+        "Evidencia 4",
+        "Evidencia 5",
+        "Evidencia 6",
+        "Evidencia 7",
+        "Evidencia 8",
+        "Evidencia 9"
+      ]
+    },
+    {
+      "id": "1",
+      "title": "Sistema de tipificación para call center",
+      "url": "https://www.google.com",
+      "description": ["Evidencia 1"]
+    }
   ]
 }
