@@ -38,7 +38,12 @@ function BodyContent() {
             </span>
             <div className="grid grid-cols-2 lg:grid-cols-1 gap-y-2 gap-x-2">
               {data.personalLinks[0].links.map((value, index) => (
-                <a href={data.personalLinks[0].src[index]} key={index} className="bento grow p-0 cursor-pointer">
+                <a
+                  href={data.personalLinks[0].src[index]}
+                  key={index}
+                  target="_blank"
+                  className="bento grow p-0 cursor-pointer"
+                >
                   <StackEntry_NEW
                     value={value}
                     type="portfolio"
@@ -56,7 +61,12 @@ function BodyContent() {
             </span>
             <div className="grid grid-cols-2 lg:grid-cols-1 gap-y-2 gap-x-2">
               {data.personalLinks[2].links.map((value, index) => (
-                <a href={data.personalLinks[2].src[index]} key={index} className="bento grow p-0 cursor-pointer">
+                <a
+                  href={data.personalLinks[2].src[index]}
+                  key={index}
+                  target="_blank"
+                  className="bento grow p-0 cursor-pointer"
+                >
                   <StackEntry_NEW
                     value={value}
                     type="contact"
@@ -76,6 +86,7 @@ function BodyContent() {
                 <a
                   href={data.personalLinks[1].src[index]}
                   key={index}
+                  target="_blank"
                   className="bento grow p-0 cursor-pointer hover:scale-105 hover:transition duration-300 ease-in-out"
                 >
                   <StackEntry_NEW
