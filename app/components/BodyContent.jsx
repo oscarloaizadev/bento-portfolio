@@ -21,7 +21,7 @@ function BodyContent() {
         <section className="flex w-full max-lg:justify-center max-lg:items-start flex-wrap gap-x-2 gap-y-2">
           <a
             className="initial-translate-3600ms bento p-0 relative flex-[1_0_100%] overflow-hidden rounded-full drop-shadow-md shadow-md duration-300 transition ease-out hover:shadow-yellow-200/50"
-            href="assets/documents/cv.pdf"
+            href="assets/documents/(2024) CV Oscar Loaiza.pdf"
             download="(2024) Oscar Loaiza CV.pdf"
           >
             <span className="absolute inset-[-10000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#FFED99_0%,#FFE066_25%,#FFD633_50%,#FFED99_75%,#FFED99_100%)]" />
