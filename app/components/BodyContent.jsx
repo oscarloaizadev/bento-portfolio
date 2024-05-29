@@ -6,6 +6,7 @@ import { HiFolderDownload } from "react-icons/hi";
 import SimpleSlider from "./SimpleSlider";
 import GradesFormation from "./GradesFormation";
 import ProjectLoader from "./ProjectLoader";
+import Image from "next/image";
 
 function BodyContent() {
   const BG_GRADES = ["bg-lime-900 text-lime-50", "bg-lime-950 text-lime-50"];
@@ -87,7 +88,7 @@ function BodyContent() {
             </div>
           </div>
 
-          <div className="initial-translate-2800ms flex flex-[1_1_100%] lg:flex-[1_1_55%] xl:flex-[1_1_65%] flex-col gap-x-2 gap-y-2">
+          <div className="initial-translate-2800ms flex flex-[1_1_100%] lg:flex-[1_1_55%] xl:flex-[1_1_65%] flex-col">
             <span className="hidden bento grow-0 bg-blue-800 text-blue-100">
               <p className="text-xl font-bold text-center">Experiencia laboral</p>
             </span>
@@ -102,7 +103,7 @@ function BodyContent() {
             </div>
           </div>
 
-          <div className="initial-translate-2600ms flex flex-[1_1_100%] lg:flex-[1_1_40%] xl:flex-[1_1_34%] flex-col gap-x-2 gap-y-2">
+          <div className="initial-translate-2600ms flex flex-[1_1_100%] lg:flex-[1_1_40%] xl:flex-[1_1_34%] flex-col">
             <span className="hidden bento grow-0 bg-lime-800 text-lime-100">
               <p className="text-xl font-bold text-center">Formación académica</p>
             </span>
@@ -182,8 +183,10 @@ function BodyContent() {
             </span>
           </div>
 
-          <div className="initial-translate-2000ms flex flex-[1_1_100%] gap-x-2 gap-y-2 w-full">
-            <ProjectLoader />
+          <div className="initial-translate rounded-2xl flex flex-[1_1_100%] w-full overflow-hidden">
+            <div className="bento text-pretty p-0 rounded-2xl overflow-hidden duration-300 transition-all ease-out gap-x-2 gap-y-2">
+              <ProjectLoader />
+            </div>
           </div>
         </section>
       </div>

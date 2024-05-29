@@ -8,7 +8,7 @@ function GradesFormation({ data, backgroundColors, badgeColors }) {
       {data.map((value, index) => (
         <div
           style={{ wordBreak: "break-word" }}
-          className={`p-4 pb-16 grow content-center flex-[1_0_100%] items-center sm:text-xl md:text-base text-base rounded-2xl me-[0.5rem] ${backgroundColors[index]}`}
+          className={`p-4 pb-16 grow content-center flex-[1_0_100%] items-center sm:text-xl md:text-base text-base rounded-2xl ${backgroundColors[index]}`}
           key={index}
         >
           <div className="mb-6">

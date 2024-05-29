@@ -165,22 +165,23 @@
   "projects": [
     {
       "id": "0",
-      "title": "Sistema de gestión de recursos gráficos",
+      "title": "Sistema web de gestión de recursos gráficos",
       "description": [
-        "Evidencia 1",
-        "Evidencia 2",
-        "Evidencia 3",
-        "Evidencia 4",
-        "Evidencia 5",
-        "Evidencia 6",
-        "Evidencia 7",
-        "Evidencia 8",
-        "Evidencia 9"
+        "Este sistema se desarrolló para mejorar y optimizar la plataforma original de Emtelco, enfocándose en la gestión eficiente de recursos gráficos. La plataforma fue rediseñada desde cero para incorporar nuevas funcionalidades que respondieran a las necesidades actuales, incluyendo: <li>Filtros</li> <li>Búsqueda por recurso</li> <li>Sistema para compartir recursos</li> <li>Previsualización de recursos</li> <li>Gestión de recursos</li>",
+        "Mockup del sistema realizado a través de Figma.",
+        "Aquí podemos ver un modal al momento de abrir un recurso en particular. Una vez la base de datos ha realizado la obtención de toda la información del recurso en particular, se procede a realizar una vista previa del mismo donde podemos observar información relevante, como lo puede ser: <li>Extensión</li> <li>Dimensiones</li> <li>Tamaño</li> <li>Tipo</li> <li>Categorías</li> A su vez, podemos Compartir, Descargar, o Cerrar el modal según nuestras necesidades.",
+        "Así se ve un recurso que ha sido obtenido a través de un enlace compartido.",
+        "Se crea también una vista previa de las imágenes con un estilo 'Pinterest', permitiendo una navegación más natural con el usuario.",
+        "Al revisar los recursos de audio, podemos observar características similares al modal de imágenes, pero aquí podremos reproducir el audio en particular.",
+        "Modal del recurso de video.",
+        "Aquí realizamos una búsqueda de todas las imágenes que contienen la cadena de caracteres 'cat' en cualquier parte de su nombre.",
+        "En esta ventana podremos subir los recursos que deseemos, filtrando documentos no válidos como hojas de cálculo, PDF, Word, etc. El usuario puede cargar una colección de archivos o arrastrarlos a la ventana correspondiente.",
+        "Una vez subidos los recursos, podemos modificar el nombre y las categorías. El aplicativo evita duplicados basados en el nombre tanto en la selección de imágenes subidas como en la base de datos."
       ]
     },
     {
       "id": "1",
-      "title": "Sistema de tipificación para call center",
+      "title": "Sistema web de tipificación para call center",
       "url": "https://www.google.com",
       "description": ["Evidencia 1"]
     }
