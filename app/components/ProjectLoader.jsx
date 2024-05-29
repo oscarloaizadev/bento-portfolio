@@ -73,7 +73,7 @@ function ProjectLoader() {
                     className={`p-4 pb-[5rem] flex grow content-center flex-[1_0_100%] items-center rounded-2xl overflow-hidden ${bgColor}`}
                   >
                     <div className="grid grid-rows-1 xl:grid-cols-3 gap-2 sm:p-4 rounded-2xl overflow-hidden">
-                      <div className="col-span-2 relative">
+                      <div className="col-span-2 relative content-center justify-center">
                         <Image
                           src={`/images/projects/${index + 1}/${i}.png`}
                           alt={value.title}
