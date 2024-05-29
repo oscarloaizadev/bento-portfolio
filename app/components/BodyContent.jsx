@@ -22,7 +22,7 @@ function BodyContent() {
           <a
             className="initial-translate-3600ms bento p-0 relative flex-[1_0_100%] overflow-hidden rounded-full drop-shadow-md shadow-md duration-300 transition ease-out hover:shadow-yellow-200/50"
             href="assets/documents/cv.pdf"
-            download={"(2024) Oscar Loaiza CV.pdf"}
+            download="(2024) Oscar Loaiza CV.pdf"
           >
             <span className="absolute inset-[-10000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#FFED99_0%,#FFE066_25%,#FFD633_50%,#FFED99_75%,#FFED99_100%)]" />
             <div className="flex grow items-center p-2 justify-center rounded-full text-lg font-bold text-yellow-950 relative z-10 backdrop-blur-3xl">
