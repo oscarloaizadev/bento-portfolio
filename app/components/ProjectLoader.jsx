@@ -22,14 +22,6 @@ function ProjectLoader() {
       buttonColor: "bg-cry-950",
       activeButtonColor: "bg-cry-700",
     },
-    {
-      id: 2,
-      textColor: "text-verdant-700",
-      activeTextColor: "text-verdant-100",
-      bgColor: "bg-verdant-950",
-      buttonColor: "bg-verdant-950",
-      activeButtonColor: "bg-verdant-700",
-    },
   ];
 
   const [bgColor, setBgColor] = useState(projectColors[0].bgColor);
@@ -98,12 +90,11 @@ function ProjectLoader() {
                       >
                         <h3 className="text-xl font-bold text-center" style={{ wordBreak: "break-word" }}>
                           {value.title}
-                          <a className="p-2 cursor-pointer">xd</a>
                         </h3>
                         <span className="inline-block items-center text-center rounded-md px-[8px] leading-none py-[8px] text-xs font-black mt-2 mb-4 shadow bg-black/80">
                           {`${i + 1}/${value.description.length}`}
                         </span>
-                        <p dangerouslySetInnerHTML={{ __html: element }}></p>
+                        <p dangerouslySetInnerHTML={{ __html: element }} className="text-pretty"></p>
                       </div>
                     </div>
                   </div>

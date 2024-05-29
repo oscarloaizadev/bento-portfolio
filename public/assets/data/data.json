@@ -182,8 +182,10 @@
     {
       "id": "1",
       "title": "Sistema web de tipificación para call center",
-      "url": "https://www.google.com",
-      "description": ["Evidencia 1"]
+      "url": "https://tipificador-desplegable.vercel.app/",
+      "description": [
+        "Esta aplicación fue diseñada originalmente para agilizar el trabajo de los agentes de un call center, permitiéndoles encontrar rápidamente la información necesaria para responder a las dudas o sugerencias de los clientes. La aplicación funciona a través de una página web en la que los agentes pueden buscar la información que necesitan utilizando palabras clave o frases específicas. La aplicación también permite filtrar los resultados de búsqueda por diferentes categorías, lo que facilita aún más la búsqueda de la información correcta. Si bien no es posible acceder a la información original de la aplicación, se han incluido algunos ejemplos prácticos para demostrar su funcionamiento. Estos ejemplos muestran cómo los agentes pueden utilizar la aplicación para encontrar la información que necesitan y responder rápidamente a las consultas de los clientes."
+      ]
     }
   ]
 }

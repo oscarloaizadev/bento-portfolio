@@ -62,14 +62,16 @@ export default function Carousel({
             </a>
           )}
 
-          <button
-            onClick={next}
-            className="flex justify-center items-center p-1 m-2 rounded-full text-white duration-300 ease-in-out transform bg-black opacity-100 md:opacity-75 hover:opacity-100 hover:rotate-0 hover:-translate-y-1"
-            aria-label={buttonLabel}
-          >
-            <span className="me-1 p-2">{buttonLabel}</span>
-            <ButtonIcon size={buttonIconSize} className="me-2" />
-          </button>
+          {slides.length > 1 && (
+            <button
+              onClick={next}
+              className="flex justify-center items-center p-1 m-2 rounded-full text-white duration-300 ease-in-out transform bg-black opacity-100 md:opacity-75 hover:opacity-100 hover:rotate-0 hover:-translate-y-1"
+              aria-label={buttonLabel}
+            >
+              <span className="me-1 p-2">{buttonLabel}</span>
+              <ButtonIcon size={buttonIconSize} className="me-2" />
+            </button>
+          )}
         </div>
       </div>
     </div>
