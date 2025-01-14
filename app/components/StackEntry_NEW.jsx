@@ -65,8 +65,8 @@ const colorMap = {
 function StackEntry({
   value,
   type,
-  className = "",
-  textClassName = "hover:transition hover:-translate-y-[2px] hover:scale-[1.05] duration-300 ease-in-out",
+  className = "flex flex-column",
+  textClassName = "items-center hover:transition hover:-translate-y-[2px] hover:scale-[1.05] duration-300 ease-in-out",
 }) {
   const item = data[type] ? data[type].find((item) => item.name === value) : false;
 

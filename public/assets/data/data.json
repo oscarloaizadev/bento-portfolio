@@ -88,6 +88,25 @@
       "id": "0",
       "empresa": "Emtelco S.A.S",
       "logo": "emtelco.png",
+      "cargo": "Creativo e-learning y desarrollador full-stack",
+      "contrato": "Tiempo completo",
+      "periodo": "Julio 2024 - Actualidad",
+      "descripcion": [
+        "Lideré el desarrollo de sistemas web full-stack y CMS empresariales (intranets) para clientes de primer nivel en Colombia, implementando patrones MVC, sistemas de plantillas a través de TWIG con Joomla 5 para optimizar procesos.",
+        "Incrementé la productividad del equipo en un 40% al establecer nuevos estándares de desarrollo y capacitar al área de Arquitectos AVA.",
+        "Reduje tiempos de respuesta de aplicaciones en un 30% optimizando consultas SQL, refactorizando código y actualizando dependencias.",
+        "Diseñé un sistema de gestión multimedia que aceleró la búsqueda de activos en un 70%, inspirado en plataformas como Freepik y Pinterest.",
+        "Migré tecnologías y modernicé plataformas CMS, eliminando deuda técnica, componentes obsoletos y cerrando vulnerabilidades de seguridad."
+      ],
+      "width": "150",
+      "height": "150",
+      "stack": ["PHP", "MySql", "HTML", "CSS", "Sass", "Javascript", "JQuery", "Bootstrap"],
+      "design": ["Illustrator", "Canva", "Figma"]
+    },
+    {
+      "id": "1",
+      "empresa": "Emtelco S.A.S",
+      "logo": "emtelco.png",
       "cargo": "Ingeniero Multimedia y Desarrollador Web",
       "contrato": "Pasantías",
       "periodo": "Noviembre 2023 - Mayo 2024",
@@ -103,7 +122,7 @@
       "design": ["Illustrator", "Canva", "Figma", "Blender"]
     },
     {
-      "id": "1",
+      "id": "2",
       "empresa": "SOS Soluciones de Informática SAS",
       "logo": "sos.png",
       "cargo": "Gestor de Proyectos e Ingeniero Multimedia",
@@ -120,7 +139,7 @@
       "design": ["Illustrator", "Photoshop", "Premiere", "Figma"]
     },
     {
-      "id": "2",
+      "id": "3",
       "empresa": "SOS Soluciones de Informática SAS",
       "logo": "sos.png",
       "cargo": "Help Desk Engineer | Soporte IT",
@@ -150,6 +169,19 @@
     },
     {
       "id": "1",
+      "empresa": "Talento Tech",
+      "logo": "TalentoTech.png",
+      "cargo": "Desarrollo Web Full-Stack",
+      "contrato": "Bootcamp",
+      "periodo": "Agosto 2024 - Octubre 2024",
+      "descripcion": [
+        "Completé un programa intensivo en Desarrollo Web Full Stack, adquiriendo habilidades en frontend con HTML, CSS, y JavaScript, y backend con Node.js, Express, y MongoDB. Aprendí a integrar bases de datos, implementar APIs REST, y optimizar rendimiento en proyectos web. También desarrollé competencias en control de versiones con Git y despliegue en plataformas como Vercel. Este curso concluyó con la creación de una aplicación de gestión de facturas electrónicas para una empresa ficticia que utilizaba un sistema de facturas electrónicas basado en MongoDB."
+      ],
+      "width": "100",
+      "height": "100"
+    },
+    {
+      "id": "2",
       "empresa": "Laracast",
       "logo": "laracast.svg",
       "cargo": "PHP for beginners",

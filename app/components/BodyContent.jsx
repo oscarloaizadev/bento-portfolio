@@ -9,11 +9,11 @@ import ProjectLoader from "./ProjectLoader";
 import Image from "next/image";
 
 function BodyContent() {
-  const BG_GRADES = ["bg-lime-900 text-lime-50", "bg-lime-950 text-lime-50"];
-  const BADGE_GRADES = ["bg-lime-200 text-lime-900", "bg-lime-200 text-lime-900"];
+  const BG_GRADES = ["bg-lime-800 text-lime-50","bg-purple-950 text-purple-50", "bg-lime-950 text-lime-50"];
+  const BADGE_GRADES = ["bg-lime-200 text-lime-900", "bg-purple-200 text-purple-900", "bg-lime-200 text-lime-900"];
 
-  const BG_EXPERIENCE = ["bg-blue-900 text-blue-100", "bg-blue-950 text-blue-200", "bg-blue-950 text-blue-200"];
-  const BADGE_EXPERIENCE = ["bg-blue-100 text-blue-900", "bg-blue-200 text-blue-950", "bg-blue-200 text-blue-950"];
+  const BG_EXPERIENCE = ["bg-blue-900 text-blue-50", "bg-blue-900 text-blue-200", "bg-slate-800 text-slate-200", "bg-slate-900 text-slate-200"];
+  const BADGE_EXPERIENCE = ["bg-blue-100 text-blue-900", "bg-blue-200 text-blue-950", "bg-slate-300 text-slate-950", "bg-slate-300 text-slate-950"];
 
   return (
     <section className="p-4 pt-0 md:p-4 md:ps-0 initial-translate">
@@ -21,7 +21,7 @@ function BodyContent() {
         <section className="flex w-full max-lg:justify-center max-lg:items-start flex-wrap gap-x-2 gap-y-2">
           <a
             className="initial-translate-3600ms bento p-0 relative flex-[1_0_100%] overflow-hidden rounded-full drop-shadow-md shadow-md duration-300 transition ease-out hover:shadow-yellow-200/50"
-            href="assets/documents/(2024) CV Oscar Loaiza.pdf"
+            href="assets/documents/(2025 - 01) CV Oscar Loaiza.pdf"
             download="(2024) Oscar Loaiza CV.pdf"
           >
             <span className="absolute inset-[-10000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#FFED99_0%,#FFE066_25%,#FFD633_50%,#FFED99_75%,#FFED99_100%)]" />
